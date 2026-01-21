@@ -1119,6 +1119,10 @@ button {
     background: linear-gradient(135deg, #000000, #25F4EE, #FE2C55);
 }
 
+.social-whatsapp::before {
+    background: linear-gradient(135deg, #25D366, #128C7E);
+}
+
 .social-card:hover {
     transform: translateY(-8px);
     box-shadow: var(--shadow-xl);
@@ -1168,6 +1172,10 @@ button {
     color: #000000;
 }
 
+.social-whatsapp .social-icon i {
+    color: #25D366;
+}
+
 .social-name {
     font-family: var(--font-display);
     font-size: 1.25rem;
@@ -1181,6 +1189,135 @@ button {
     font-size: 0.9375rem;
     color: var(--color-texto-light);
     transition: color var(--transition-normal);
+}
+
+/* ========================================
+   Grupo de Seguidores (WhatsApp)
+   ======================================== */
+.whatsapp-group-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.whatsapp-group-card {
+    background: var(--color-blanco);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    padding: var(--spacing-xl);
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-lg);
+    position: relative;
+    overflow: hidden;
+}
+
+.whatsapp-group-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: linear-gradient(90deg, #25D366, #128C7E);
+}
+
+.whatsapp-group-icon {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, #25D366, #128C7E);
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 30px rgba(37, 211, 102, 0.3);
+}
+
+.whatsapp-group-icon i {
+    font-size: 3rem;
+    color: var(--color-blanco);
+}
+
+.whatsapp-group-content h3 {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    color: var(--color-texto);
+    margin-bottom: var(--spacing-sm);
+}
+
+.whatsapp-group-content p {
+    color: var(--color-texto-light);
+    line-height: 1.7;
+    margin-bottom: var(--spacing-md);
+}
+
+.whatsapp-group-benefits {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--spacing-sm) var(--spacing-lg);
+}
+
+.whatsapp-group-benefits li {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    color: var(--color-texto);
+    font-weight: 500;
+}
+
+.whatsapp-group-benefits li i {
+    color: #25D366;
+}
+
+.whatsapp-group-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    background: linear-gradient(135deg, #25D366, #128C7E);
+    color: var(--color-blanco);
+    padding: var(--spacing-md) var(--spacing-xl);
+    border-radius: var(--radius-full);
+    font-weight: 600;
+    font-size: 1.125rem;
+    text-decoration: none;
+    transition: all var(--transition-normal);
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+}
+
+.whatsapp-group-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+}
+
+.whatsapp-group-btn i {
+    font-size: 1.5rem;
+}
+
+@media (max-width: 480px) {
+    .whatsapp-group-card {
+        padding: var(--spacing-lg);
+    }
+
+    .whatsapp-group-icon {
+        width: 80px;
+        height: 80px;
+    }
+
+    .whatsapp-group-icon i {
+        font-size: 2.5rem;
+    }
+
+    .whatsapp-group-benefits {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 /* ========================================
